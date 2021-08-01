@@ -1,0 +1,142 @@
+:root{
+    --main-neon-blue: #2dbeeb;
+    --navbar-background:#e7e2e2;
+    --dark-text-color:#160a0a;
+    --white-text-color:#f1f1f1;
+    --initial-default-color:#f1f5f8;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: "Ubuntu",sans-serif;
+    box-sizing: border-box;
+}
+ 
+.nav{
+    position: relative;
+    background-color: var(--navbar-background);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 6vh;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    
+}
+
+
+.main-name , .main-name:visited , .main-name:link{
+    color: var(--main-neon-blue);
+    text-shadow: 2px 2px red;
+}
+
+.main-name{
+    font-size: 1.7rem;
+}
+
+.ul-options a{
+    font-size: 1.20rem;
+}
+
+
+.ul-options a , .ul-options a:visited , .ul-options a:link{
+    color: var(--dark-text-color);
+}
+
+.ul-options a:hover , .ul-options a:active {
+    color: var(--main-neon-blue);
+}
+
+.ul-options li {
+    display: inline-block;
+    margin: 0 1.10rem;
+}
+
+.activated {
+    color: var(--main-neon-blue) !important;
+}
+
+
+@media screen and (max-width: 767px){
+    .main-name{
+        font-size: 1.1rem;
+    }
+
+    .ul-options a{
+        font-size: 0.8rem;
+    }
+
+    .ul-options li {
+        margin: 0 0.2rem;
+    }
+}
+
+.main-content{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    flex-direction: column;
+    height: 94vh;
+    background-color: var(--initial-default-color);
+}
+
+.color-info{
+    margin: 2.5rem 0;
+    padding: 1.5rem 1.5rem;
+    width: 40%;
+    background-color: #10102b;
+    border-radius: 0.9rem;
+    box-shadow: #00000059 0px 5px 15px;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .color-info{
+        width: 75%;
+    }
+}
+
+.color-info h3{
+    font-size: 2.3rem;
+    color: var(--white-text-color);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 767px){
+    .color-info{
+        width: 90%;
+    }
+
+    .color-info h3{
+        font-size: 1.2rem;
+    }
+
+}
+
+#current-color{
+    color: var(--initial-default-color);
+}
+
+#color-btn{
+    cursor: pointer;
+    text-transform: uppercase;
+    min-width: 10ch;
+    font-size: 1.1rem;
+    background-color: var(--white-text-color);
+    border-radius: 0.7rem;
+    border: solid 1px #10102b;
+    padding: 0.6rem 1.1rem;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+#color-btn:hover , #color-btn:active{
+    background-color:#10102b;
+    color: var(--white-text-color) ;
+}
+
+#color-btn:active{
+    color: var(--main-neon-blue) ;
+}
